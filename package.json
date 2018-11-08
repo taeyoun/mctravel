@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "create-react-class": "^15.6.3",
+    "moment": "^2.22.2",
+    "rc-time-picker": "^3.4.0",
     "react": "^16.6.1",
+    "react-bootstrap": "^0.32.4",
+    "react-bootstrap-date-picker": "github:maxaggedon/react-bootstrap-date-picker",
+    "react-datepicker": "^1.8.0",
     "react-dom": "^16.6.1",
     "react-scripts": "2.1.1"
   },
