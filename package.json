@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "create-react-class": "^15.6.3",
     "moment": "^2.22.2",
     "rc-time-picker": "^3.4.0",
