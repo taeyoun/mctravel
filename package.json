@@ -11,7 +11,9 @@
     "react-bootstrap-date-picker": "github:maxaggedon/react-bootstrap-date-picker",
     "react-datepicker": "^1.8.0",
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "react-moment-input": "^0.2.15",
+    "react-scripts": "2.1.1",
+    "react-simple-dropdown": "^3.2.3"
   },
   "scripts": {
     "start": "react-scripts start",

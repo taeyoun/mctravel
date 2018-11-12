@@ -19,7 +19,7 @@ import Col from 'react-bootstrap/lib/Col';
 import moment from 'moment';
 import TimePicker from 'rc-time-picker';
 import { useState } from 'react';
-
+import MomentInput from 'react-moment-input';
 
 
 //CSS files
@@ -95,41 +95,60 @@ class FieldGroup extends React.Component {
         return(
             <Grid>
                 <Row className="show-grid">
-                    <Form inline >
-                        <FormGroup controlId="formInlineFlightNo">
-                        <InputGroup>
-                        <FormControl type="text" fno={this.state.fno} onChange={this.handleChange} />
-                        <InputGroup.Addon>
-                        <Glyphicon glyph="plane" />
-                        </InputGroup.Addon>
-                        </InputGroup>
-                        </FormGroup>
-
-                        <FormGroup controlId="formInlineName">
-                        <InputGroup>
-                        <FormControl type="text" placeholder="Jane Doe" name={this.state.name} onChange={this.handleChange}/>
-                        <InputGroup.Addon>
-                        <Glyphicon glyph="user" />
-                        </InputGroup.Addon>
-                        </InputGroup>
-                        </FormGroup>
-
-                        <FormGroup controlId="formInlineDate">
-                        <InputGroup>
-                        <InputGroup.Addon>
-                        <Example /><Glyphicon glyph="calendar" />
-                        </InputGroup.Addon>
-                        </InputGroup>
-                        </FormGroup>
-
-                        <FormGroup controlId="formInlineTime">
-                        <InputGroup.Addon>
-                        <TimePicker defaultValue={moment()} showSecond={false} minuteStep={15} /><Glyphicon glyph="time" />
-                        </InputGroup.Addon>
-                        </FormGroup>
-
-                        <Button id="flightInlineSearch" onClick={this.handleSubmit}><Glyphicon glyph="search" /></Button>
-                    </Form>
+                    <Col xs={12} md={12}>
+                        <Row>
+                            <Form inline >
+                                <Col xs={6} md={2}>
+                                <FormGroup controlId="formInlineFlightNo">
+                                    <InputGroup>
+                                    <FormControl type="text" fno={this.state.fno} onChange={this.handleChange} />
+                                        <InputGroup.Addon>
+                                            <Glyphicon glyph="plane" />
+                                        </InputGroup.Addon>
+                                        </InputGroup>
+                                </FormGroup>
+                                </Col>
+                                <Col xs={6} md={3}>
+                                <FormGroup controlId="formInlineName">
+                                    <InputGroup>
+                                    <FormControl type="text" placeholder="Jane Doe" name={this.state.name} onChange={this.handleChange}/>
+                                        <InputGroup.Addon>
+                                            <Glyphicon glyph="user" />
+                                    </InputGroup.Addon>
+                                    </InputGroup>
+                                </FormGroup>
+                                </Col>
+                                <Col xs={6} md={3}>
+                                <FormGroup controlId="formInlineDate" className="form-inline-date">
+                                    <InputGroup>
+                                    <InputGroup.Addon>
+                                    <Example /><Glyphicon glyph="calendar" />
+                                    </InputGroup.Addon>
+                                    </InputGroup>
+                                </FormGroup>
+                                </Col>
+                                <Col xs={6} md={3}>
+                                <FormGroup controlId="formInlineTime" className="form-inline-time">
+                                    <InputGroup.Addon>
+                                    <TimePicker defaultValue={moment()} showSecond={false} minuteStep={15} /><Glyphicon glyph="time" />
+                                    </InputGroup.Addon>
+                                </FormGroup>
+                                </Col>
+                                {/*<FormGroup>*/}
+                                    {/*<MomentInput*/}
+                                        {/*max={moment().add(5,'days')}*/}
+                                        {/*min={moment()}*/}
+                                        {/*format="YYYY-MM-DD HH:mm"*/}
+                                        {/*options={true}*/}
+                                        {/*readOnly={false}*/}
+                                        {/*icon={false} />*/}
+                                {/*</FormGroup>*/}
+                                <Col xs={12} md={1}>
+                                <Button id="flightInlineSearch" onClick={this.handleSubmit}><Glyphicon glyph="search" /></Button>
+                                </Col>
+                            </Form>
+                        </Row>
+                    </Col>
                 </Row>
             </Grid>
             );
